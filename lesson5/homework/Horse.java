@@ -12,7 +12,7 @@ public class Horse extends Animals{
     }
     @Override
     void lengthJump(float lengthJumpValue) {
-        if ((lengthJumpValue >=0) && (lengthJumpValue<=run))
+        if ((lengthJumpValue >=0) && (lengthJumpValue<=jump))
             System.out.println("Лошадь перепрыгнула высоту");
         else System.out.println("Лошадь не перепрыгнула! " + lengthJumpValue + "м. не более " + jump + "м.");
     }
