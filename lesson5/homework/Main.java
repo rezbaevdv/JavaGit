@@ -12,6 +12,8 @@
         То есть у одной собаки ограничение на бег может быть 400 м., у другой 600 м.м
 */
 package lesson5.homework;
+import lesson4.homework.Workers;
+
 import java.util.Scanner;
 public class Main {
 
@@ -19,32 +21,26 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        Dog dog = new Dog(500, 0.5f, 10);
-        Horse horse = new Horse(1500, 3, 100);
-        Cat cat = new Cat(200, 2);
-        Bird bird = new Bird(5, 0.2f);
+        Animals[] animals = new Animals[4];
+        animals[0] = new Dog (500, 0.5f, 10);
+        animals[1] = new Horse(1500, 3, 100);
+        animals[2] = new Cat(200, 2);
+        animals[3] = new Bird(5, 0.2f);
 
         System.out.println("Введите дистанцию для бега:");
-        int lengthRunValue = scanner.nextInt();
-
-        dog.lengthRun(lengthRunValue);
-        horse.lengthRun(lengthRunValue);
-        cat.lengthRun(lengthRunValue);
-        bird.lengthRun(lengthRunValue);
-
+            int lengthRunValue = scanner.nextInt();
+                for (int i = 0; i < animals.length; i++) {
+                    animals[i].lengthRun(lengthRunValue);
+        }
         System.out.println("\nВведите высоту для прыжка:");
-        float lengthJumpValue = scanner.nextInt();
-        dog.lengthJump(lengthJumpValue);
-        horse.lengthJump(lengthJumpValue);
-        cat.lengthJump(lengthJumpValue);
-        bird.lengthJump(lengthJumpValue);
-
-        System.out.println("\nВведите дистанцию для плавания:");
-        int lengthSailValue = scanner.nextInt();
-        dog.lengthSail(lengthSailValue);
-        horse.lengthSail(lengthSailValue);
-        cat.lengthSail(lengthSailValue);
-        bird.lengthSail(lengthSailValue);
-
+            int lengthJumpValue = scanner.nextInt();
+                for (int i = 0; i < animals.length; i++) {
+                    animals[i].lengthJump(lengthJumpValue);
+        }
+                System.out.println("\nВведите дистанцию для плавания:");
+                int lengthSailValue = scanner.nextInt();
+                for (int i = 0; i < animals.length; i++) {
+                    animals[i].lengthSail(lengthSailValue);
+        }
     }
 }
